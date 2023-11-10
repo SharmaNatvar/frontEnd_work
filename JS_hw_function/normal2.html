@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>normal function 2</h1>
+    <h2><a href="normal1.html">normal function 1</a></h2>
+    <h2><a href="normal3.html">normal function 3</a></h2>
+
+
+    <script>
+        // normal function
+        function lastName(){
+            console.log("sharma")
+        }
+        lastName();
+
+        // self invoke
+        (function firstName(){
+            console.log("krishna")
+        })()
+
+        
+    </script>
+</body>
+</html>

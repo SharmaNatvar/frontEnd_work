@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>number</title>
+</head>
+<body>
+    <input type="number" placeholder="First number" id="firstNum">
+    <input type="number" placeholder="Second number" id="secNum">
+    <input type="submit" onclick="check()"/>
+    <h2>before <span id="before"></span></h2>
+    <h2>after <span id="after"></span></h2>
+
+
+    <script>
+
+        function check(){
+            let first = parseInt(document.getElementById("firstNum").value);
+            let sec = parseInt(document.getElementById("secNum").value);
+           
+            document.getElementById('before').innerHTML=("first"+first)+("sec"+sec);
+
+            first+=sec;
+            sec=first-sec;
+            first=first-sec;
+            
+            document.getElementById('after').innerHTML=("first"+first)+("sec"+sec);
+                // document.getElementById('num').innerHTML="sec"+sec;
+       }
+    </script>
+</body>
+</html>

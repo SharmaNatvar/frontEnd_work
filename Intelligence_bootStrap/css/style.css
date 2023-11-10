@@ -1,0 +1,126 @@
+:root{
+    --primary-color: rgba(103, 58, 183, 0.8);
+}
+/* ============default css start============= */
+*{
+    margin: 0px;
+    box-sizing: border-box !important;
+}
+body{
+    font-family: poppins;
+}
+
+html{
+    scroll-behavior: smooth;
+    transition: all 0.5;
+}
+
+img{
+    max-width: 100%;
+    display: block;
+}
+a{
+    text-decoration: none;
+    color: #fff;
+}
+.container{
+    max-width: 1200;
+}
+/* ============default css ============= */
+
+/* .moon-icon i{
+    display: flex;
+    justify-content: end;
+} */
+.nav-item a{
+    padding: 6px 7px;
+}
+
+
+/* banner start */
+.banner-bg{
+    height: 100vh;
+    background-image: url("../images/banner1.jpg");
+    background-color: var(--primary-color);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    z-index: 0;
+}
+.banner-bg::after{
+    position: absolute;
+    content: "";
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    background-color: rgba(103, 58, 183, 0.8);
+}
+.banner{
+    width: 800px;
+    position: absolute;
+    top: 25%;
+    left: 25%;
+}
+.banner h3{
+    font-size: 100px;
+    line-height: 70px;
+    font-weight: 900;
+    text-transform: capitalize;
+    /* text-align: center; */
+}
+
+/* banner end */
+
+.services-home{
+    max-width: 700px;
+}
+
+
+.choose-us h3{
+    font-family: poppins-900;
+    font-weight: 900;
+    font-size: 32px;
+    line-height: 48px;
+}
+
+
+.number-bg{
+    height: 40vh;
+    background-image: url("../images/banner.jpg");
+    background-color: var(--primary-color);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    z-index: 0;
+}
+.number-bg:after{
+    position: absolute;
+    content: "";
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* .date{
+    position: relative;
+} */
+.date{
+    position: relative;
+}
+.date-btn{
+    position: absolute;
+    bottom: 0%;
+    right: 0;
+    border-radius: 0%;
+    font-size: small;
+}
+.card-footer img{
+    width: 50px;
+}

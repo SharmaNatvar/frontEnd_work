@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+        <div class="container">
+            <h1>TO DO LIST</h1>
+            <input type="text" id="text" placeholder="Add a task">
+            <button onclick="addlist()">Add Task</button>
+
+            <ul id="textList"></ul>
+           
+        </div>
+    </body>
+    <script>
+        const text = document.getElementById("text");
+        const textList = document.getElementById("textList");
+       function addlist(){
+
+
+    
+            if (text.value === "") {
+                alert('write some thing')
+            }
+
+            else{
+
+                let li = document.createElement("li");
+                li.innerHTML = text.value;
+                textList.appendChild(li);
+
+                let delBtn = document.createElement("button");
+                delBtn.innerHTML = "delete it";
+                li.appendChild(delBtn); 
+
+                li.addEventListener('click',function(){
+                    textList.removeChild(li);
+                })
+            }
+            text.value = " "
+       }
+    </script>
+    
+    </html>

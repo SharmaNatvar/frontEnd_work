@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+      <h1 id="nameMovieA"></h1>
+      <!-- <h2></h2> -->
+      <button type="submit" onclick="movie()">movie data</button>
+  
+</body>
+<script>
+
+const APIURL =
+    "https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&api_key=04c35731a5ee918f014970082a0088b1&page=1";
+const IMGPATH = "https://image.tmdb.org/t/p/w1280";
+const SEARCHAPI =
+    "https://api.themoviedb.org/3/search/movie?&api_key=04c35731a5ee918f014970082a0088b1&query=";
+
+
+ async function movie(){
+   let getMovieData = await fetch("https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&api_key=04c35731a5ee918f014970082a0088b1&page=1");
+   console.log(getMovieData)
+   let movieData = await getMovieData.json(); 
+//    console.log(movieData)
+   showMovies(movieData.results)
+ }
+
+ function showMovies(data){
+    let movieDataDisplay = data;
+
+    movieDataDisplay.map(function(movieName){
+        let nameDisplay = document.createElement('h2');
+        nameDisplay.innerHTML =  `${movieName.original_title}`
+        console.log(nameDisplay)
+        // document.write()
+    })
+    // console.log(data)
+    // console.log(data[0].original_title)
+
+    // document.write(data[0].original_title)
+    // console.log(data.data);
+
+ }
+
+</script>
+</html>

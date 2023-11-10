@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Example of Concat , sort,reverse find and findIndex.</h1>
+    
+    <script>
+        document.write("<hr/>")
+        // ========================================================
+        let conArr = ["html","css","javascript"]
+        let conArr2 = ["php","node","express"]
+        let conArr3 = ["mySql","mogoDb"]
+        
+        document.write("example of concat ==> <br/><br/>");
+        
+        conArr4 = conArr.concat(conArr2);
+        document.write(conArr4 + "<br/><br/>");
+        
+        conArr4 = conArr.concat(conArr2,conArr3);
+        document.write(conArr4 + "<hr/>");
+        
+        // ========================================================
+        document.write("<hr/>")
+        let sortArr = ["html","css","javascript","php","node","express","mogoDb"]
+        
+        document.write("example of sort() array ==> <br/><br/>");
+        document.write("before sort ==> " + sortArr + "<br/><br/>")
+        sortArr2 = sortArr.sort();
+        
+        document.write( " after sort ==> " + sortArr2 +"<hr/>")
+        
+        // ========================================================
+        document.write("<hr/>")
+        let revArr = ["html","css","javascript","php","node","express","mogoDb"]
+        
+        document.write("example of reverse() array ==> <br/><br/>");
+        document.write("before reverse ==> " + revArr + "<br/><br/>")
+
+        revArr2 = revArr.reverse();
+        
+        document.write( " after sort ==> " + revArr2 +"<hr/>")
+
+    </script>
+</body>
+</html>

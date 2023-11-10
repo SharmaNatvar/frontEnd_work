@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        *{
+            padding: 0px;
+            margin: 0px;
+            box-sizing: border-box;
+        }
+        .container{
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .box{
+            width: 300px;
+            height: 100px;
+            border: 1px solid #000;
+            display: flex;
+            text-align: center;
+            /* align-items: ; */
+            justify-content: center;
+            flex-direction: column;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+            <h2 id="colorCode">#ffffff</h2>
+            <button type="submit" onclick="getColorstart()">click here to start</button>
+            <br/>
+            <!-- <button type="submit" onclick="stopColor()">click here to end</button> -->
+        </div>
+    </div>
+</body>
+<script>
+    function getColorstart(){
+        let colorcodeinter = setInterval(getColor,1000)
+    }
+    function getColor(){
+        let colorCode = document.getElementById('colorCode')
+            let getColorCode = `#${Math.random().toString(16).slice(2,8).padEnd(6,0)}`
+            colorCode.innerHTML = getColorCode
+            document.body.style.background = getColorCode
+    }
+    // function stopColor(){
+    //     // console.log(colorcodeinter)
+    //     clearInterval(colorcodeinter)
+    // }
+    
+</script>
+</html>

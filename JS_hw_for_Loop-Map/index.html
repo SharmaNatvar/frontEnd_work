@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    let detail = [{
+        name : "krishna",
+        age:23,
+        school:"GLOBALE INTERNATIONAL"
+    },
+    {
+        name:"hitesh",
+        age:21,
+        school:"Era International School"
+    }]
+
+    let personlName = detail.map(valueName => valueName.name);
+    let personlAge = detail.map(valueAge => valueAge.age);
+    let personlSchool = detail.map(valueSchool => valueSchool.school);
+
+    console.log(personlName);
+    console.log(personlAge);
+    console.log(personlSchool);
+</script>
+</html>

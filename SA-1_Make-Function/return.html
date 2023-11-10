@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        // function oddEven(){
+        //     let first=7;
+        //     // let number = {
+        //         if(first%2==0){
+        //             console.log(first,'even number')
+        //         }
+        //         else{
+        //             console.log(first,"number are odd")
+        //         }                
+        //     // }
+
+        //     let secNum=8,thrNum=10;
+        //     if(secNum>=thrNum){
+        //         console.log(secNum,'second number is greter value');
+        //     }
+        //     else{
+        //         console.log(thrNum,'3rd number is greter ')
+        //     }
+        // }
+        // oddEven()
+
+        function bio(){
+            let skill ={
+                language: "javascript",
+                dsaLanguage:"c++",
+                degineLanguage:"html Css",
+                farmwork:"bootstrap"
+            }
+            let detial = {
+                name:'sharma',
+                collage:'vnsgu',
+                school:'rmg',
+                phone:987654321
+            }
+            return{skill, ...detial}
+        }
+        personalBio=bio()
+        console.log(personalBio,"personl deatial")
+    </script>
+</body>
+</html>

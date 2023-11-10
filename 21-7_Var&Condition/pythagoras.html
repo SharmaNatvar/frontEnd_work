@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            text-align: center;
+            font-size: 25px;
+            margin: 30px;
+        }
+        input{
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Basic Pythagoras</h1>
+    <input type="text" id="firstNum" placeholder="a"/><br/><br/>
+    <input type="text" id="secondNum" placeholder="b"/><br/><br/>
+    <input type="text" id="threeNum" placeholder="c"/><br/><br/>
+    <input type="submit" onclick="sum()"/>
+    <h2 >answer : <span id="lhs"></span><span id="rhs"></span></h2>
+
+
+    <script>
+        function sum(){
+            let afirst = parseInt(document.getElementById('firstNum').value);
+            let bSec = parseInt(document.getElementById('secondNum').value);
+            let cthree = parseInt(document.getElementById('threeNum').value);
+            // = a^2+b^2 = C^2
+            let firstSide = afirst*afirst+bSec*bSec;  
+            let secSide = cthree*cthree;
+            document.getElementById('lhs').innerHTML='LHS = '+firstSide;
+            document.getElementById('rhs').innerHTML=' RHS = '+secSide;
+        }
+    </script>
+</body>
+</html>

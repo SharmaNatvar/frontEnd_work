@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="timer">to start the timer click on btn</h1>
+    <button type="submit" onclick="startTimer()"> start timer</button>
+    <button type="submit" onclick="endTimer()"> stop timer</button>
+</body>
+<script>
+
+    let timer = document.getElementById('timer')
+    let num = 0;
+    let stopTime;
+    // timer 
+    function startTimer(){
+        console.log("hay")
+        timer.innerHTML = `loading......`
+        setTimeout(timeDisplay,10); 
+    }
+
+    function timeDisplay(){
+        stopTime = setInterval(()=>{
+            timer.innerHTML = `your timer start ${num}`
+            num++;
+        },1000)
+    }
+
+    function endTimer() {
+        clearInterval(stopTime);
+    }
+
+    // setTimeout((a,b)=>{
+    //     console.log(a+b);
+    // },1000,3,4)
+
+    // setTimeout(function hello(){
+    //     console.log("hay bro this is hello function in setTimeout");
+    // },200);
+
+
+    //  user input to run this program
+
+    // let ans = prompt("enter yes to run program");
+
+    // let a = setTimeout(function(){
+    //     console.log(" you type no to run to this program");
+    // },500)
+
+    // if(ans == "yes" ){
+    //     clearTimeout(a);
+    // }
+        
+
+    // // if i use var as a variable than
+    // function abc(){
+    //     for(var i = 1; i<=5;i++){
+    //         setTimeout(()=>{
+    //             console.log(i)
+    //         },1000);
+    //     }
+    // }
+    // abc();
+
+    // // if i use let as a variable
+    // function efg(){
+    //     for(let i = 1; i<=5;i++){
+    //         setTimeout(()=>{
+    //             console.log(i)
+    //         },1000);
+    //     }
+    // }
+    // efg();
+
+
+    // parameter with setTimeout
+
+    function myDetail(nameS,income){
+        let myBio = `my name is ${nameS},my income is ${income}`
+        console.log(myBio)
+    }
+
+    setTimeout(myDetail("krish",1000),100);
+
+    // arrow function 
+    let hayBro = (phone,company) =>{
+        let detailPhone = `your phone is ${phone} , and its company is ${company}`;
+        console.log(detailPhone);
+    }
+    
+    setTimeout(hayBro,1000,"pixel8","google")
+</script>
+</html>

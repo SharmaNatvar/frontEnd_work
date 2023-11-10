@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            text-align: center;
+            font-size: 25px;
+            margin: 30px;
+        }
+        input{
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Height Mesurement</h1>
+    <input type="text" id="firstNum" placeholder="enter your height in cm"/><br/><br/>
+    <input type="submit" onclick="sum()"/>
+    <h2 >answer : <span id="answer"></span></h2>
+
+
+    <script>
+        function sum(){
+            let afirst = parseInt(document.getElementById('firstNum').value);
+            // Greater Number A&B
+            if(afirst>=165){
+                document.getElementById('answer').innerHTML='its tall';
+            }
+            else{
+                document.getElementById('answer').innerHTML='its not tall';
+            }
+        }
+    </script>
+</body>
+</html>

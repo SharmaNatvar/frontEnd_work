@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    async function getDataUser(){
+        let userData = await fetch('https://jsonplaceholder.typicode.com/todos');
+        console.log(userData)
+        let apiRespose = await userData.json()
+        if(userData.status == 200){
+            console.log(apiRespose)
+        }
+        else{
+            console.error("data not found")
+        }
+    } 
+
+    getDataUser()
+</script>
+</html>

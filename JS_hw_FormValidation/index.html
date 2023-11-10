@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background: transparent; /* Make it white if you need */
+            color: #fcbe24;
+            padding: 0 24px;
+            margin: 0;
+            height: 100vh;
+            /* align-items: center; */
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+        h1{
+            display: flex;
+            justify-content: center;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="header"></h1>
+    <input id="fullName" type="text" placeholder="full Name"/>
+    <br/>
+    <input id="address" type="text" placeholder="address"/>
+    <br/>
+    <input id="age" type="number" placeholder="age"/>
+    <br/>
+    <input id="job" type="text" placeholder="job"/>
+    <br/>
+    <input id="phone" type="number" placeholder="phone"/>
+    <br/>
+    <input id="country" type="text" placeholder="country"/>
+    
+    <button type="submit" onclick="submit()"> submit </button>
+
+    <p id="error" style="color: red;"></p>
+    <h5 id="userName"></h5>
+    <h5 id="userAddress"></h5>
+    <h5 id="userAge"></h5>
+    <h5 id="userJob"></h5>
+    <h5 id="userPhone"></h5>
+    <h5 id="userCountry"></h5>
+</body>
+<script>
+    function submit(){
+        let fullName = document.getElementById('fullName').value;
+        let address = document.getElementById('address').value;
+        let age = document.getElementById('age').value;
+        let job = document.getElementById('job').value;
+        let phone = document.getElementById('phone').value;
+        let country = document.getElementById('country').value;
+
+        // console.log(fullName,address,age,job,phone,country);
+
+        try {
+            
+            if(fullName && address && age && job && phone && country){
+                alert("form submit successfully");
+                document.getElementById('fullName').innerHTML=" ";
+
+                let userData ={
+                    name:fullName,
+                    address:address,
+                    age:age,
+                    job:job,
+                    phone:phone,
+                    country:country
+                }
+
+
+                localStorage.setItem('personData',JSON.stringify(userData));
+            }
+            else{
+                throw "plase fill the form properly"
+            }
+        } 
+        catch (error) {
+            alert(error)
+            document.getElementById('error').innerHTML=error
+        }
+        
+    }
+
+    let getData = JSON.parse(localStorage.getItem('personData'))
+                // console.log(getData)
+    document.getElementById('userName').innerText = `name = ${getData.name}`;
+    document.getElementById('userAddress').innerText = `address = ${getData.address}`;
+    document.getElementById('userAge').innerText = `age = ${getData.age}`;
+    document.getElementById('userJob').innerText = `job = ${getData.job}`;
+    document.getElementById('userPhone').innerText = `phone = ${getData.phone}`;
+    document.getElementById('userCountry').innerText = `country = ${getData.country}`;
+    // submit();
+</script>
+</html>

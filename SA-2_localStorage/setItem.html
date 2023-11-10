@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+
+    <script>
+        // json file
+
+        let user ={
+            name : "sharma",
+            collage : "vnsgu",
+            rollNo : 23,
+            age: 22
+        }
+
+        let skill = {
+            language : "javascript",
+            codingLanguage : "c++",
+            other : "python",
+            degineLanguage : "css"
+        }
+
+        let frontend = {
+            firstLanguage : "html",
+            degine : "css",
+            farmework: "bootstrap",
+            functionLanguage : "javascript"
+        }
+
+        let backend ={
+            database : "mogoDB",
+            backendLanguage: "nodeJS"
+        }
+
+
+// setItem
+        localStorage.setItem("user Data", JSON.stringify(user));
+        localStorage.setItem("skill data",JSON.stringify(skill));
+        localStorage.setItem("frontend", JSON.stringify(frontend));
+        localStorage.setItem("backend skill",JSON.stringify(backend));
+
+// getItem
+        let getUserdata = localStorage.getItem("frontend");
+        console.log(getUserdata)
+    </script>
+</body>
+</html>

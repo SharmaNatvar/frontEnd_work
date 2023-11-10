@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>number</title>
+</head>
+<body>
+    <input type="number" placeholder="enter number" id="number">
+    <input type="submit" onclick="check()" />
+    <h2>your number is <span id="num"></span></h2>
+
+
+    <script>
+
+        function check(){
+           let num = parseInt(document.getElementById("number").value);
+
+                    
+            if(num>0){
+                document.getElementById('num').innerHTML="Positive Number";
+            }
+            else if(num<0){
+                document.getElementById('num').innerHTML="Negetive Number";
+            }
+            else if(num===0){
+                document.getElementById('num').innerHTML=" zero";
+            }
+            else{
+                document.getElementById('num').innerHTML="not valid";
+            }
+       }
+    </script>
+</body>
+</html>

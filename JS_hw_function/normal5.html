@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>normal function 5</h1>
+    <h2><a href="./normal4.html">normal function 4</a></h2>
+
+
+    <script>
+        // normal function
+        function sum(){
+            console.log(15+16);
+            console.log(45-16);
+            console.log(15*1);
+            console.log(70/2);
+        }
+        sum();
+
+        //self invoke
+        
+        (function total(){
+            console.log("a+b")
+            console.log("a-b")
+            console.log("a*b")
+            console.log("a/b")
+        })()
+    </script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>number</title>
+</head>
+<body>
+    <input type="number" placeholder="enter number" id="firstNum">
+    <input type="number" placeholder="enter number" id="secNum">
+    <input type="text" placeholder="enter symbol (+,-,*,/)" id="case">
+    <input type="submit" onclick="check()"/>
+    <h2>your number is <span id="num"></span></h2>
+
+
+    <script>
+
+        function check(){
+            let first = parseInt(document.getElementById("firstNum").value);
+            let sec = parseInt(document.getElementById("secNum").value);
+            let thr = document.getElementById("case").value;
+            let sum
+            
+            switch(thr){
+                case '+':
+                    sum = first+sec;
+                    document.getElementById('num').innerHTML="your sum "+sum;
+                    break;
+                case '-':    
+                    sum = first-sec;
+                    document.getElementById('num').innerHTML="your sum "+sum;
+                    break;
+                case '*':    
+                    sum = first*sec;
+                    document.getElementById('num').innerHTML="your sum "+sum;
+                    break;
+                case '/':    
+                    sum = first/sec;
+                    document.getElementById('num').innerHTML="your sum "+sum;
+                    break;
+            }
+       }
+    </script>
+</body>
+</html>

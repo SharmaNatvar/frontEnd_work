@@ -1,0 +1,70 @@
+:root {
+    --primary-color: #4f46e5;
+    --primary-color-hover: #4338ca;
+    --footer-color: #192132;
+    --pera-color: #94a3ba;
+    --white: #fff;
+    --black: #000;
+  }
+*{
+    margin: 0px;
+    box-sizing: border-box;
+}
+img{
+    max-width: 100%;
+    display: block;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+body{
+    font-family: nunito;
+}
+html{
+    scroll-behavior: smooth;
+    transition: all 0.5;
+}
+.container{
+    max-width: 1140px;
+}
+
+.banner-bg{
+    margin-top: 70px;
+    height: 100vh;
+    /* width: 100vw; */
+    background-image: url(../images/bg.png);
+    background-color: var(--primary-color);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    /* background-blend-mode: soft-light; */
+    clip-path: circle(99.9% at 50% 0);
+}
+.banner{
+    position: relative;
+}
+
+.banner h2 {
+    position: absolute;
+    top: 27vh;
+    left: 30%;
+    text-align: center;
+    font-size: 48px;
+}
+
+.banner p {
+    position: absolute;
+    top: 45vh;
+    left: 26%;
+    text-align: center;
+    font-size: 18px;
+}
+
+.banner button {
+    position: absolute;
+    top: 57vh;
+    left: 46%;
+}
+
+

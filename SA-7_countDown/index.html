@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <span id="hour">60</span>
+    <span id="min">60</span>
+    <span id="sec">60</span>
+    <span id="count">100</span><br/>
+    <button onclick="start()">start</button>
+    <button onclick="end()">end</button>
+    <button onclick="reset()">reset</button>
+</body>
+<script>
+    let hour = 60;
+    let min = 60;
+    let sec = 60;
+    let count =100;
+
+    let timer;
+
+   function start(){
+        timer = true;
+        clockTimer();
+   }
+
+   function end(){
+        timer = false;
+        clockTimer();
+   }
+
+   function reset(){
+        timer = false;
+
+        // hour = 0;
+        // min = 0;
+        // sec = 0;
+        // count = 0;
+        document.getElementById('hour').innerHTML = "60";
+        document.getElementById('min').innerHTML = "60";
+        document.getElementById('sec').innerHTML = "60";
+        document.getElementById('count').innerHTML = "100";
+   }
+
+   function clockTimer(){
+        if(timer == true){
+            count--
+            if(count == 0){
+                sec--
+                count=100
+                if(sec == 0){
+                    min--
+                    sec = 60
+                    if (min == 0) {
+                        hour--
+                        min=60
+                        document.getElementById('hour').innerHTML = hour;
+                    }
+                    document.getElementById('min').innerHTML = min;
+                }
+                document.getElementById('sec').innerHTML = sec;
+            }
+            setTimeout('clockTimer()', 1);
+            document.getElementById('count').innerHTML= count;
+        }
+
+   }
+
+
+
+
+
+//    function clockTimer(){
+//     if(timer == true){
+//         count++;
+//         if(count == 100){
+//             sec++;
+//             count = 0;
+//             if(sec == 60){
+//                 min++;
+//                 sec=0;
+//                 if(min == 60){
+//                     hour++;
+//                     document.getElementById('hour').innerHTML = hour;
+//                     min=0;
+//                 }
+//                 document.getElementById('min').innerHTML = min;
+
+//             }
+//             document.getElementById('sec').innerHTML = sec;
+
+//         }
+//         document.getElementById('count').innerHTML= count;
+
+//         setTimeout('clockTimer()', 10);
+//     }
+//    }
+   clockTimer()
+
+</script>
+</html>

@@ -1,0 +1,106 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+a {
+    text-decoration: none;
+    color: black;
+}
+html{
+    scroll-behavior: smooth;
+    transition: all 0.5s;
+}
+
+/* =============================== */
+.container{
+    padding: 20px;
+}
+.hero{
+    width: 100%;
+    min-height: 100vh;
+    /* background-repeat: no-repeat; */
+    background-position: center;
+    background-size: cover;
+    background: linear-gradient(45deg,rgba(0,0,0,0.85),rgba(118,0,255,0.85)), url("../image/background.jpg");
+    color: #fff;
+    padding: 10px 8%;
+    text-align: center;
+    /* position: relative; */
+    /* z-index: 1; */
+}
+/* .hero::before{
+    z-index: -1;
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 60, 255, 0.305);
+} */
+.navbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    /* position: relative; */
+}
+.navbar img{
+    width: 3rem;
+    height: 3rem;
+}
+.getButton{
+    /* width: 7rem;
+    height: 2rem; */
+    border: 0;
+    outline: 0;
+    padding: 16px 30px;
+    font-size: 16px;
+    /* text-align: center; */
+    border-radius: 40px;
+    color: #fff;
+    background: linear-gradient(#6a33ff,#351a80);
+}
+.comingText{
+    margin: 15% auto 0;
+}
+.comingText h1{
+    font-size: 65px;
+    font-weight: 400;
+}
+.comingText form{
+    background-color: #fff;
+    border-radius: 30px;
+    width: 80%;
+    max-width: 500px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    /* margin: 40px 0 20px 0; */
+    margin: 30px auto;
+}
+.comingText input{
+    border: 0;
+    outline: 0;
+    flex: 1;
+    padding: 20px 30px;
+    font-size: 16px;
+    background-color: transparent;
+}
+.socialIcon{
+    /* position: absolute; */
+    bottom: 0;
+    /* left: 50%; */
+    margin-top: 10%;
+    font-size: 30px;
+    /* padding: 0 20px; */
+}
+.socialIcon i{
+    padding: 0 10px;
+}

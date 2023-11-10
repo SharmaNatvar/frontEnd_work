@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            text-align: center;
+            font-size: 25px;
+            margin: 30px;
+        }
+        input{
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Basic Math Formula </h1>
+    <input type="text" id="firstNum"/><br/><br/>
+    <input type="text" id="secondNum"/><br/><br/>
+    <input type="submit" onclick="sum()"/>
+    <h2>Math Formula answer : <span id="answer"></span></h2>
+
+
+    <script>
+        function sum(){
+            let a = parseInt(document.getElementById('firstNum').value);
+            let b = parseInt(document.getElementById('secondNum').value);
+            // 2a*(a^2+b^2)*2b -->
+            let totalSum = 2*a*(a*a+b*b)*2*b;
+            document.getElementById('answer').innerHTML=totalSum;
+        }
+    </script>
+</body>
+</html>

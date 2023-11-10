@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>number</title>
+</head>
+<body>
+    <input type="number" placeholder="enter number" id="firstNum">
+    <input type="number" placeholder="enter number" id="secNum">
+    <input type="number" placeholder="enter number" id="thrNum">
+    <input type="submit" onclick="check()"/>
+    <h2>your number is <span id="num"></span></h2>
+
+
+    <script>
+
+        function check(){
+            let first = parseInt(document.getElementById("firstNum").value);
+            let sec = parseInt(document.getElementById("secNum").value);
+            let thr = parseInt(document.getElementById("thrNum").value);
+            if(first>sec){
+                if(first>thr){
+                    document.getElementById('num').innerHTML="a is greter "+first;
+                }
+                else{
+                    document.getElementById('num').innerHTML="c is greter "+thr;
+                }
+            }
+            else{
+                if(sec>thr){
+                    document.getElementById('num').innerHTML="b is greter "+sec;
+                }
+                else{
+                    document.getElementById('num').innerHTML="c is greter "+thr;
+                }
+            }
+       }
+    </script>
+</body>
+</html>

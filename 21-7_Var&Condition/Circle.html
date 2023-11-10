@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin: 30px;
+            text-align: center;
+            font-size: 30px;
+        }
+        input{
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h2>Area Of Circle </h2>
+    <input type="text" id="inputNumber"/>
+    <input  type="submit" onclick="area()"/>
+    <h3>your answer : <span id="answer"></span></h3>
+
+    <script>
+        function area(){
+            let r = parseInt(document.getElementById('inputNumber').value);
+            // pi*r^2
+            answer= 3.14*r*r;
+            document.getElementById('answer').innerHTML=answer
+        }
+    </script>
+</body>
+</html>

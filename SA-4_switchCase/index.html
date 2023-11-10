@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Switch-Case</title>
+</head>
+<body>
+    <h3>enter your number to check result</h3>
+    <input id="number" type="number" placeholder="enter your number ">
+    <button onclick="result()">check me</button>
+
+    <h2 id="showResult"></h2>
+</body>
+<script>
+    function result(){
+        
+        let getNumber = document.getElementById('number');
+        
+        let resultNumber =getNumber.value;
+        let grade;
+
+        switch(true){
+            case resultNumber<=100 && resultNumber>=95:
+                grade = "pass You get = A+";
+                break;
+            
+            case resultNumber<95 && resultNumber>=85:
+                grade = "pass You get = A";
+                break;
+
+            case resultNumber<85 && resultNumber>=80:
+                grade = "pass You get = B+";
+                break;
+            
+            case resultNumber<80 && resultNumber>=70:
+                grade = "pass You get = B";
+                break;
+            
+            case resultNumber<70 && resultNumber>=65:
+                grade = "pass You get = C+";
+                break;  
+            
+            case resultNumber<65 && resultNumber>=55:
+                grade = "pass You get = C";
+                break;  
+            
+            case resultNumber<55 && resultNumber>=50:
+                grade = "pass You get = D+";
+                break;  
+            
+            case resultNumber<50 && resultNumber>=40:
+                grade = "pass You get = D";
+                break;  
+            
+            case resultNumber<40 && resultNumber>=0:
+                grade = "fail You get = E";
+                break;  
+            
+            default :
+                grade = "you are not enter valid number";
+        }
+
+        document.getElementById("showResult").innerText = grade
+    }
+</script>
+</html>

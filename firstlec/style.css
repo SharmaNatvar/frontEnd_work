@@ -1,0 +1,21 @@
+h1{
+    text-align: center;
+}
+.hay{
+    text-align: end;
+    border: 2px solid red;
+}
+.ram{
+    text-align: start;
+    border: 2px solid red;
+}
+#rahul{
+    color: red;
+}
+.head1,.subHead{
+    text-align: center;
+}
+.subHead{
+    font-size: 50px;
+    
+}

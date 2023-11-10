@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            text-align: center;
+            font-size: 25px;
+            margin: 30px;
+        }
+        input{
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Greater Number</h1>
+    <input type="text" id="firstNum" placeholder="a"/><br/><br/>
+    <input type="text" id="secondNum" placeholder="b"/><br/><br/>
+    <input type="submit" onclick="sum()"/>
+    <h2 >answer : <span id="answer"></span></h2>
+
+
+    <script>
+        function sum(){
+            let afirst = parseInt(document.getElementById('firstNum').value);
+            let bSec = parseInt(document.getElementById('secondNum').value);
+            // Greater Number A&B
+            if(afirst>bSec){
+                document.getElementById('answer').innerHTML=afirst;
+            }
+            else{
+                document.getElementById('answer').innerHTML=bSec;
+            }
+        }
+    </script>
+</body>
+</html>

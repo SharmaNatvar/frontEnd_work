@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>normal function 3</h1>
+    <h2><a href="./normal2.html">normal function 2</a></h2>
+    <h2><a href="./normal4.html">normal function 4</a></h2>
+
+    <script>
+
+        // normal function
+        function detail(){
+            console.log("collage : vnsgu")
+        }
+        detail();
+
+        // self invoke 
+        (function collageDetail(){
+            console.log("{Courses : bca}");
+            console.log("{Fees:10000}");
+        })()
+    </script>
+</body>
+</html>

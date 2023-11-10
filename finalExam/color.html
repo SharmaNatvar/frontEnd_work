@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button type="submit" onclick="getColor()">click here</button>
+</body>
+<script>
+    // setInterval invoke
+    function getColor(){
+        setInterval(getColorCode,10000)
+    }
+    // color code
+    function getColorCode(){
+        let colorCode = `#${Math.random().toString(16).slice(2,8).padEnd(6,0)}`
+        document.body.style.background = colorCode
+    }
+</script>
+</html>
